@@ -250,6 +250,50 @@ p {
   color: var(--textos-secundarios);
   text-align: center;
 }
+
+/* Sección Cita */
+.cita {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.cita blockquote p {
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--textos);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.cita cite {
+  color: var(--detalles);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+/* Icono WhatsApp */
+
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+   background-color: rgba(80, 110, 85, 0.85); 
+  color: var(--detalles);
+  backdrop-filter: blur(4px);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
 /* ---------------------------------------Media queries*/
 
 /* Mobile first (default) */
