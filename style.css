@@ -77,28 +77,65 @@ body {
 
 /* Burguer Menú */
 .menu-icon {
-  font-size: 1.7rem;
-  color: var(--detalles);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   cursor: pointer;
 }
 
-/* Menú */
+.burger-linea {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--detalles);
+  transition: all 0.3s ease;
+}
+
+#menu-toggle:checked + .menu-icon .burger-linea:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon .burger-linea:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon .burger-linea:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Nav Bar */
 .nav {
   position: absolute;
   top: 60px;
   left: 45px;
-  width: 40%;
-  background: var(--topbar);
+  width: 200px;
   opacity: 0.7;
   display: none;
-  flex-direction: column;
-  text-align: left;
+  padding: 20px;
+  background: rgba(45, 47, 34, 0.85); 
+  backdrop-filter: blur(8px);
+  border-radius: 12px 12px 12px 12px;
+}
+.ul-nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.li-nav {
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(241, 234, 216, 0.1);
+  list-style: none;
+  text-align: center;
+}
+
+.li-nav:last-child {
+  border-bottom: none;
 }
 
 .nav a {
-  padding: 15px;
-  color: #f1ead8;
-  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 2px; 
+ text-decoration: none;
+ color: var(--detalles);
 }
 
 /* Activación de menú */
@@ -106,7 +143,7 @@ body {
   display: flex;
 }
 
-/* Media queries*/
+/* ---------------------------------------Media queries*/
 
 /* Mobile first (default) */
 
@@ -134,13 +171,23 @@ body {
 
   .nav {
     position: static;
-    display: flex;
-    flex-direction: row;
     gap: 20px;
     width: auto;
     opacity: 1;
     background: none;
+    display: flex;
   }
+
+  .ul-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  list-style: none;
+}
+
+.li-nav:last-child {
+  border-bottom: 1px solid rgba(241, 234, 216, 0.1);
+}
 
   .nav a {
     padding: 0;
@@ -152,22 +199,7 @@ body {
 }
 
 /* Desktop */
-/* @media (min-width: 1024px) {
 
-  .header {
-    width: 100%;          
-    max-width: 1200px;   
-
-    margin: 25px auto 0 auto;
-
-    justify-content: flex-start;
-    gap: 40px;
-
-    left: 0;
-    right: 0;
-  }
-
-} */
 @media (min-width: 1024px) {
   .header {
     padding: 15px clamp(20px, 10vw, 200px);
