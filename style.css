@@ -53,6 +53,7 @@ body {
   letter-spacing: 4px;
   background: var(--topbar);
   color: var(--textos);
+  height: 25px;
 }
 
 .parrafo-top-bar {
@@ -561,7 +562,7 @@ p {
 
   .top-bar {
     letter-spacing: 10px;
-    height: 4%;
+    height: 25px;
   }
 
   .parrafo-top-bar {
