@@ -23,7 +23,8 @@ body {
 }
 
 .titulo-principal,
-.subtitulo-sobre-mi .subtitulo-galeria {
+.subtitulo-sobre-mi,
+.subtitulo-galeria {
   font-family: var(--fuente-titulos);
 }
 
