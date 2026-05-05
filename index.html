@@ -227,6 +227,40 @@
       <!-- Fin "Sección cita" -->
 
       <div class="separador">✧</div>
+
+<!-- Comienzo sección "contacto/formulario" -->
+<section id="contacto" class="contacto">
+  <h2 class="subtitulo-contacto">¿Te interesa contactarme?</h2>
+  <p class="contacto-descripcion">Escribime y te respondo a la brevedad.</p>
+
+  <form class="formulario" netlify name="contacto">
+    <fieldset class="formulario-fieldset">
+      <legend class="formulario-legend">Datos de contacto</legend>
+
+      <div class="formulario-grupo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="formulario-grupo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
+      </div>
+
+      <div class="formulario-grupo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje..." rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+    </fieldset>
+  </form>
+</section>
+<!-- Fin sección contacto -->
+
+<div class="separador">✧</div>
+
     </main>
 
     <!-- Fin sección principal-->

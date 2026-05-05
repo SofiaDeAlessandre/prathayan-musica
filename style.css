@@ -188,6 +188,7 @@ p {
   min-height: 250px;
   object-fit: cover;
   object-position: center top;
+  max-width: 500px;
 }
 
 .separador {
@@ -255,27 +256,6 @@ p {
   text-align: center;
 }
 
-/* Sección Cita */
-.cita {
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.cita blockquote p {
-  font-family: var(--fuente-titulos);
-  font-size: 1.6rem;
-  font-style: italic;
-  color: var(--textos);
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-}
-
-.cita cite {
-  color: var(--detalles);
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-}
 
 /* Sección Galería */
 
@@ -318,6 +298,119 @@ p {
   letter-spacing: 1px;
   text-align: center;
 }
+
+/* Sección Cita */
+.cita {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.cita blockquote p {
+  font-family: var(--fuente-titulos);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--textos);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+}
+
+.cita cite {
+  color: var(--detalles);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+/* Sección Contacto */
+.contacto {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.subtitulo-contacto {
+  font-family: var(--fuente-titulos);
+  color: var(--detalles);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contacto-descripcion {
+  margin-bottom: 30px;
+}
+
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulario-fieldset {
+  border: 1px solid rgba(241, 234, 216, 0.2);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.formulario-legend {
+  color: var(--detalles);
+  font-family: var(--fuente-titulos);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  padding: 0 10px;
+}
+
+.formulario-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formulario-grupo label {
+  color: var(--textos);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.formulario-grupo input,
+.formulario-grupo textarea {
+  background: rgba(241, 234, 216, 0.1);
+  border: 1px solid rgba(241, 234, 216, 0.2);
+  border-radius: 8px;
+  padding: 12px;
+  color: var(--textos);
+  font-family: var(--fuente-body);
+  font-size: 0.95rem;
+  outline: none;
+}
+.formulario-grupo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+
+.formulario-grupo input:focus,
+.formulario-grupo textarea:focus {
+  border-color: var(--detalles);
+}
+
+.btn-enviar {
+  background-color: var(--botones);
+  color: var(--textos);
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-family: var(--fuente-body);
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-enviar:hover {
+  background-color: var(--topbar);
+}
+
 
 /* Icono WhatsApp */
 
@@ -418,6 +511,7 @@ p {
   .hero-descripcion {
     flex: 1;
     text-align: left;
+    align-self: center;
   }
 
   .imagen-hero {
@@ -441,9 +535,10 @@ p {
   }
 
   .imagen-hero {
-    width: 50%;
-    max-height: 600px;
+     width: 40%;
+    max-height: 550px;
     object-fit: cover;
+    object-position: center 15%;
   }
 
   .galeria-grid {
