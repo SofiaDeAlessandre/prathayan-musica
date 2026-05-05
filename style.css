@@ -33,13 +33,13 @@ body {
 .header {
   display: flex;
   position: fixed;
-  top: 25px;               
+  top: 25px;
   width: 100%;
   z-index: 3000;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-  background-color: var(--background);  
+  background-color: var(--background);
   box-shadow: 0 1px 6px var(--sombras);
 }
 
@@ -74,16 +74,19 @@ body {
 }
 
 /* Logo */
+
 .logo {
   width: 150px;
 }
 
 /* Ocultación de checkbox */
+
 #menu-toggle {
   display: none;
 }
 
 /* Burguer Menú */
+
 .menu-icon {
   display: flex;
   flex-direction: column;
@@ -112,11 +115,13 @@ body {
 }
 
 /* Activación de menú */
+
 #menu-toggle:checked + .menu-icon + .nav {
   display: flex;
 }
 
 /* Nav Bar */
+
 .nav {
   position: absolute;
   top: 0px;
@@ -170,6 +175,7 @@ main {
   padding: 30px;
   gap: 30px;
   text-align: center;
+  scroll-margin-top: 105px;
 }
 
 .titulo-principal {
@@ -188,6 +194,21 @@ p {
   object-fit: cover;
   object-position: center top;
   max-width: 500px;
+  border-radius: 12px;
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
 }
 
 .separador {
@@ -212,6 +233,7 @@ p {
 #sobre-mi {
   padding: 40px 20px;
   text-align: center;
+  scroll-margin-top: 105px;
 }
 
 .subtitulo-sobre-mi {
@@ -227,7 +249,8 @@ p {
   margin-bottom: 15px;
 }
 
-/* Íconos */
+/* Íconos sección "Sobre mí"*/
+
 .sobre-mi-iconos {
   display: flex;
   flex-wrap: wrap;
@@ -255,7 +278,6 @@ p {
   text-align: center;
 }
 
-
 /* Sección Galería */
 
 .galeria {
@@ -263,6 +285,7 @@ p {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+  scroll-margin-top: 105px;
 }
 
 .subtitulo-galeria {
@@ -299,9 +322,11 @@ p {
 }
 
 /* Sección Cita */
+
 .cita {
   padding: 60px 40px;
   text-align: center;
+  scroll-margin-top: 105px;
 }
 
 .cita blockquote p {
@@ -321,9 +346,11 @@ p {
 }
 
 /* Sección Contacto */
+
 .contacto {
   padding: 40px 20px;
   text-align: center;
+  scroll-margin-top: 105px;
 }
 
 .subtitulo-contacto {
@@ -381,11 +408,11 @@ p {
   font-size: 0.95rem;
   outline: none;
 }
+
 .formulario-grupo textarea {
   resize: vertical;
   min-height: 120px;
 }
-
 
 .formulario-grupo input:focus,
 .formulario-grupo textarea:focus {
@@ -410,31 +437,10 @@ p {
   background-color: var(--topbar);
 }
 
+/* FOOTER */
 
-/* Icono WhatsApp */
-
-.whatsapp-flotante {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: rgba(80, 110, 85, 0.85);
-  color: var(--detalles);
-  backdrop-filter: blur(4px);
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  z-index: 9999;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-}
-
-/* Footer */
 .footer {
-  background-color: var(--background);
+  background-color: var(--topbar);
   box-shadow: 0 -2px 8px var(--sombras);
   padding: 50px 20px 0;
   margin-top: 20px;
@@ -459,7 +465,6 @@ p {
 
 .footer-logo {
   width: 130px;
-  opacity: 0.9;
 }
 
 .footer-tagline {
@@ -526,17 +531,34 @@ p {
   opacity: 0.7;
 }
 
+/* Icono WhatsApp */
 
+.whatsapp-flotante {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(80, 110, 85, 0.85);
+  color: var(--detalles);
+  backdrop-filter: blur(4px);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
 
-/* ---------------------------------------Media queries*/
-
-/* Mobile first (default) */
-
-/* Celular horizontal */
-/* @media (min-width: 480px) {} */
+/* Media queries --------> Mobile first (default) */
 
 /* Tablet */
+
 @media (min-width: 768px) {
+  /* Header */
+
   .top-bar {
     letter-spacing: 10px;
     height: 4%;
@@ -587,9 +609,13 @@ p {
     width: 200px;
   }
 
+  /*Main*/
+
   main {
     padding-top: 135px;
   }
+
+  /*Sección Hero*/
 
   .hero {
     flex-direction: row;
@@ -597,6 +623,7 @@ p {
     gap: 50px;
     position: relative;
     padding-bottom: 80px;
+    scroll-margin-top: 135px;
   }
 
   .titulo-principal {
@@ -613,6 +640,18 @@ p {
     width: 50%;
   }
 
+  /*Sección Sobre mí*/
+
+  #sobre-mi {
+    scroll-margin-top: 135px;
+  }
+
+  /*Sección Galería*/
+
+  .galeria {
+    scroll-margin-top: 135px;
+  }
+
   .galeria-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -621,14 +660,30 @@ p {
     height: 200px;
   }
 
-   .footer-inner {
+  /*Sección Cita*/
+
+  .cita {
+    scroll-margin-top: 135px;
+  }
+
+  /*Sección Contacto*/
+
+  .contacto {
+    scroll-margin-top: 135px;
+  }
+
+  /*Footer*/
+
+  .footer-inner {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
+
   .footer-nav-titulo {
     text-align: left;
   }
+
   .footer-nav-lista,
   .footer-contacto-lista {
     align-items: flex-start;
@@ -638,16 +693,22 @@ p {
 /* Desktop */
 
 @media (min-width: 1024px) {
+  /*Header*/
+
   .header {
     padding: 15px clamp(20px, 10vw, 200px);
   }
 
+  /* Sección Hero*/
+
   .imagen-hero {
-     width: 40%;
+    width: 40%;
     max-height: 550px;
     object-fit: cover;
     object-position: center 15%;
   }
+
+  /*Sección Galería*/
 
   .galeria-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -659,7 +720,10 @@ p {
 }
 
 /* Large desktop */
+
 @media (min-width: 1280px) {
+  /*Header*/
+
   .header {
     gap: 60px;
   }

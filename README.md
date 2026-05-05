@@ -13,7 +13,7 @@ Landing page para **Prathayan**, cantante profesional y profesora de canto, con 
 
 ## 📋 Descripción
 
-Sitio web first mobile de una sola página (landing page) desarrollado como trabajo práctico final.  
+Sitio web mobile first de una sola página (landing page) desarrollado como trabajo práctico final.  
 El objetivo fue presentar los servicios de Prathayan de manera clara, estética y accesible, respetando su identidad visual: colores tierra, tipografías elegantes y un tono cálido e introspectivo.
 
 ---
@@ -59,6 +59,7 @@ prathayan/
 │   ├── image-galeria-5.webp
 │   └── image-galeria-6.webp
 └── README.md
+
 ```
 
 ---
@@ -70,6 +71,8 @@ Todas las imágenes fueron optimizadas con **[Squoosh](https://squoosh.app/)**:
 - Calidad: **75%**
 
 Esto reduce el peso de las imágenes significativamente sin pérdida visual perceptible, mejorando los tiempos de carga del sitio.
+
+Para remover fondo del logo, se utilizó https://www.remove.bg .
 
 ---
 
