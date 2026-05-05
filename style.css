@@ -15,10 +15,6 @@
   --sombras: rgba(45, 47, 34, 0.1);
   --fuente-titulos: "Cormorant Garamond", serif;
   --fuente-body: "Jost", sans-serif;
-
-   --topbar-h: 25px;
-  --nav-h-mobile: 60px;
-  --nav-h-tablet: 70px;
 }
 
 body {
@@ -55,7 +51,6 @@ body {
   overflow: hidden;
   z-index: 1000;
   letter-spacing: 4px;
-  opacity: 0.9;
   background: var(--topbar);
   color: var(--textos);
 }
@@ -437,6 +432,102 @@ p {
   text-decoration: none;
 }
 
+/* Footer */
+.footer {
+  background-color: var(--background);
+  box-shadow: 0 -2px 8px var(--sombras);
+  padding: 50px 20px 0;
+  margin-top: 20px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(241, 234, 216, 0.12);
+}
+
+.footer-logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 130px;
+  opacity: 0.9;
+}
+
+.footer-tagline {
+  font-family: var(--fuente-titulos);
+  font-style: italic;
+  color: var(--detalles);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-nav-titulo {
+  font-family: var(--fuente-titulos);
+  color: var(--detalles);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.footer-nav-lista,
+.footer-contacto-lista {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-nav-lista a,
+.footer-contacto-lista a {
+  text-decoration: none;
+  color: var(--textos-secundarios);
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-lista a:hover,
+.footer-contacto-lista a:hover {
+  color: var(--detalles);
+}
+
+.footer-contacto-lista a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contacto-lista i {
+  font-size: 1.1rem;
+  color: var(--detalles);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-bottom p {
+  color: var(--textos-secundarios);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+}
+
+
+
 /* ---------------------------------------Media queries*/
 
 /* Mobile first (default) */
@@ -528,6 +619,19 @@ p {
 
   .imagen-galeria {
     height: 200px;
+  }
+
+   .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer-nav-titulo {
+    text-align: left;
+  }
+  .footer-nav-lista,
+  .footer-contacto-lista {
+    align-items: flex-start;
   }
 }
 
