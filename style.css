@@ -23,7 +23,7 @@ body {
 }
 
 .titulo-principal,
-.subtitulo-sobre-mi {
+.subtitulo-sobre-mi .subtitulo-galeria {
   font-family: var(--fuente-titulos);
 }
 
@@ -167,7 +167,7 @@ main {
 .hero {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
   gap: 30px;
   text-align: center;
 }
@@ -184,6 +184,9 @@ p {
 
 .imagen-hero {
   width: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .separador {
@@ -203,9 +206,8 @@ p {
   opacity: 0.4;
 }
 
-/* Sección "Sobre mí"
+/* Sección "Sobre mí" */
 
-/* Sección Sobre mí */
 #sobre-mi {
   padding: 40px 20px;
   text-align: center;
@@ -213,7 +215,7 @@ p {
 
 .subtitulo-sobre-mi {
   color: var(--detalles);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -285,7 +287,7 @@ p {
 
 .subtitulo-galeria {
   color: var(--detalles);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
 }
 
@@ -314,14 +316,6 @@ p {
   margin-top: 8px;
   letter-spacing: 1px;
   text-align: center;
-}
-
-.galeria-item:first-child .imagen-galeria {
-  object-position: center 5%;
-}
-
-.galeria-item:nth-child(3) .imagen-galeria {
-  object-position: center 5%;
 }
 
 /* Icono WhatsApp */
@@ -411,7 +405,7 @@ p {
   .hero {
     flex-direction: row;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
     position: relative;
     padding-bottom: 80px;
   }
@@ -446,8 +440,8 @@ p {
   }
 
   .imagen-hero {
-    width: 40%;
-    max-height: 500px;
+    width: 50%;
+    max-height: 600px;
     object-fit: cover;
   }
 
